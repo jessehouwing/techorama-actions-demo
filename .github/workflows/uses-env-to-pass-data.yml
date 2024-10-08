@@ -12,6 +12,11 @@ jobs:
       - id: message
         name: Run a one-line script
         # BAD! This example is vulnerable to environment hijacking
-        run: echo "message=bad" >> $GITHUB_ENV
+        run: echo "message=original" >> $GITHUB_ENV
 
+      - id: overwrite-message
+        name: Run a one-line script
+        # BAD! This example is vulnerable to environment hijacking
+        run: echo "message=bad" >> $GITHUB_ENV
+        
       - run: echo "$message"
