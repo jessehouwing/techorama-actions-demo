@@ -1,0 +1,19 @@
+name: Passes data through env
+
+on:
+  push:
+    branches: [ "main" ]
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: message
+        name: Run a one-line script
+        # BAD! This example is vulnerable to environment hijacking
+        run: echo "message=bad" >> $GITHUB_ENV
+
+      - run: echo "$message"
