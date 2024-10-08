@@ -1,5 +1,5 @@
-name: 'Print message'
-description: 'Prints a message to the console.'
+name: 'Shuts down the runner'
+description: 'Shuts down the runner.'
 branding:
   icon: 'check-circle'
   color: 'orange'
@@ -11,7 +11,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: "Printing message..."
+    - name: "Shutting down runner..."
       run: |
-          echo ${env:INPUT_MESSAGE}
-      shell: pwsh
+        sudo poweroff
+      shell: bash
