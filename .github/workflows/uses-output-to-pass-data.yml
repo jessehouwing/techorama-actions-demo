@@ -1,0 +1,19 @@
+name: Passes data through env
+
+on:
+  push:
+    branches: [ "main" ]
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - id: message
+        name: Set the message
+        run: echo "message=good" >> $GITHUB_OUTPUT
+
+      - run: echo "$message"
+        name: Display the message
+        env: 
+          message: ${{ steps.message.outputs.message }}
