@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run a one-line script
-        # BETTER! This example is vulnerable to script injection
+        # BETTER! This example not vulnerable to script injection
         run: echo $message
         env:
           message: ${{ github.event.head_commit.message }}
