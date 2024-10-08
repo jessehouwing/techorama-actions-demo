@@ -13,5 +13,5 @@ runs:
   steps:
     - name: "Printing message..."
       run: |
-        echo ${env:INPUT_MESSAGE}
+          echo ${env:INPUT_MESSAGE}
       shell: pwsh
