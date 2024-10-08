@@ -9,6 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: jessehouwing/techorama-actions-demo@f94b1f67c975bafc5c4320566b39b3239bfde076
-      - uses: jessehouwing/techorama-actions-demo@e0641204cab477bfb7c91d94718e60f0aedcb1a5
+        with:
+          message: "Good job!"
+
 
 # e0641204cab477bfb7c91d94718e60f0aedcb1a5
