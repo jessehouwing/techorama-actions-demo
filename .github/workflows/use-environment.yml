@@ -1,0 +1,18 @@
+name: Scrip Injection
+
+on:
+  push:
+    branches: [ "main" ]
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        # BETTER! This example is vulnerable to script injection
+        run: echo $message
+        env:
+          message: ${{ github.event.head_commit.message }}
