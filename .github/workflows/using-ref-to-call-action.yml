@@ -1,0 +1,13 @@
+name: Calling action using sha
+on:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jessehouwing/techorama-actions-demo@v1.0.0
+        with:
+          message: "Good job!"
