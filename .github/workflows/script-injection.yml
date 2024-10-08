@@ -1,4 +1,4 @@
-name: Scrip Injection
+name: Script Injection
 
 on:
   push:
@@ -15,3 +15,4 @@ jobs:
         # BAD! This example is vulnerable to script injection
         run: echo "${{ github.event.head_commit.message }}"
 
+# " | sudo poweroff | echo"
