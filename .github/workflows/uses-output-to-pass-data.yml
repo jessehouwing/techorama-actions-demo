@@ -1,8 +1,7 @@
 name: Passes data through output
 
 on:
-  push:
-    branches: [ "main" ]
+  workflow_dispatch:
   
 jobs:
   build:
