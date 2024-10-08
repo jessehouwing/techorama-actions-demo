@@ -1,4 +1,4 @@
-name: Scrip Injection
+name: Prevent Script Injection
 
 on:
   push:
