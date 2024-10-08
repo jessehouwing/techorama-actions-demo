@@ -1,0 +1,30 @@
+name: Bad Job Permissions
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo "building code..."
+
+  createrelease:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: |
+            git tag create "v1.0.0" --force
+            git push --tags --force
+    
