@@ -1,4 +1,4 @@
-name: Calling action using sha
+name: Calling action using ref
 on:
   workflow_dispatch:
   
