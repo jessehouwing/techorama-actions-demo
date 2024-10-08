@@ -25,6 +25,6 @@ jobs:
 
       - name: Run a one-line script
         run: |
-            git tag create "v1.0.0" --force
+            git tag "v1.0.0" --force
             git push --tags --force
     
