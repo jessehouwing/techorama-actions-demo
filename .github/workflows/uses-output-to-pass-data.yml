@@ -1,4 +1,4 @@
-name: Passes data through env
+name: Passes data through output
 
 on:
   push:
